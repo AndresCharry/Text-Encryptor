@@ -1,5 +1,10 @@
+html {
+  height: 93%;
+}
+
 body {
-  background-color: #F3F5FC;
+  background-color: #f3f5fc;
+  height: 100%;
 }
 
 .container {
@@ -17,4 +22,240 @@ body {
   position: relative;
   top: 40px;
   left: 40px;
+}
+
+main {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.area-enc-des {
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  margin: 0 40px;
+  justify-content: center;
+}
+
+.area-write-buttons {
+  flex-basis: calc(55% - 80px);
+}
+
+.column {
+  flex-direction: column;
+  height: 100%;
+}
+
+.column textarea {
+  flex-basis: 100%;
+  margin-top: 128px;
+
+  background-color: transparent;
+  color: #0a3871;
+
+  border: none;
+  resize: none;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+}
+
+textarea:focus {
+  outline: 0;
+}
+
+textarea::placeholder {
+  color: #0a3871;
+}
+
+.area-info {
+  width: 100%;
+}
+
+.info-text {
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.note {
+  margin-left: 10px;
+}
+
+.buttons {
+  flex-direction: row;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.button-enc {
+  flex-basis: 50%;
+  margin-right: 12px;
+}
+
+.button-dec {
+  flex-basis: 50%;
+  margin-left: 12px;
+}
+
+.button-enc button {
+  width: 100%;
+  height: 67px;
+  background-color: #0a3871;
+  color: #ffffff;
+  border: none;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+
+.button-dec button {
+  width: 100%;
+  height: 67px;
+
+  background-color: #d8dfe8;
+  color: #0a3871;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+}
+
+.button-enc button:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.button-dec button:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.area-view {
+  flex-basis: calc(35% - 80px);
+  margin: 40px 40px;
+}
+
+.area-image-text {
+  position: relative;
+  justify-content: center;
+
+  background-color: #ffffff;
+
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+}
+
+.image-text {
+  justify-content: center;
+  text-align: center;
+}
+
+.image img {
+  margin: 0 auto;
+}
+
+.text {
+  font-family: "Inter";
+  font-style: normal;
+}
+
+.text h1 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.text p {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.invisible {
+  display: none;
+}
+
+.area-view-text {
+  margin: 40px;
+  justify-content: center;
+}
+
+.view-text {
+  flex-basis: 100%;
+}
+
+.text-des-enc button {
+  flex-basis: 25%;
+  margin: 0 10px;
+
+  background-color: transparent;
+  color: #0a3871;
+
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.area-contact {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.git {
+  margin-right: 5px;
+  padding: 2.5px 10px;
+  border: solid 1px #0a3871;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.linkedin {
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 2.5px 10px;
+  border: solid 1px #0a3871;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.twitter {
+  margin-left: 5px;
+  padding: 2.5px 10px;
+
+  border: solid 1px #0a3871;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  background-color: #ffffff;
 }

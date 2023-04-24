@@ -1,19 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/reset.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="logo">
-          <img src="https://res.cloudinary.com/dd8ylkdm3/image/upload/v1681687653/Encriptador%20de%20texto/Logo_dhuxnb.png" />
+
+<head>
+  <title>Text encryption</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img
+          src="https://res.cloudinary.com/dd8ylkdm3/image/upload/v1681687653/Encriptador%20de%20texto/Logo_dhuxnb.png" />
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="area-enc-des flex">
+        <form class="area-write-buttons">
+          <div class="column flex">
+            <textarea placeholder="Enter the text here"></textarea>
+            <div class="area-info">
+              <div class="info-text flex">
+                <img
+                  src="https://res.cloudinary.com/dd8ylkdm3/image/upload/v1681763394/Encriptador%20de%20texto/signo-de-exclamacion_orcapf.png" />
+                <p class="note">Only lowercase letters and no accents</p>
+              </div>
+              <div class="buttons flex">
+                <div class="button-enc">
+                  <button type="">Encrypt</button>
+                </div>
+                <div class="button-dec">
+                  <button type="">Decrypt</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="area-view">
+          <div class="area-image-text column flex">
+            <div class="image-text column flex">
+              <div class="image">
+                <img
+                  src="https://res.cloudinary.com/dd8ylkdm3/image/upload/v1681696270/Encriptador%20de%20texto/Mu%C3%B1eco_aq53fd.png" />
+              </div>
+              <div class="text">
+                <h1>No message was found</h1>
+                <p>Enter the text you want to encrypt or decrypt</p>
+              </div>
+            </div>
+            <div class="area-view-text column flex invisible">
+              <form class="view-text">
+                <div class="text-des-enc column flex">
+                  <textarea></textarea>
+                  <button>Copy</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
-  </body>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="area-contact flex">
+        <div class="git">
+          <a href="https://github.com/AndresCharry"><img
+              src="https://res.cloudinary.com/dd8ylkdm3/image/upload/v1682356165/github_dcgavl.png" /></a>
+        </div>
+        <div class="linkedin">
+          <a href="https://www.linkedin.com/in/andres-felipe-charry-zamorano/"><img
+              src="https://res.cloudinary.com/dd8ylkdm3/image/upload/v1682356161/linkedin_1_dyxfvv.png" /></a>
+        </div>
+        <div class="twitter">
+          <a href="https://twitter.com/CharryZamo19883"><img
+              src="https://res.cloudinary.com/dd8ylkdm3/image/upload/v1682355784/twitter_fmmys7.png" /></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
