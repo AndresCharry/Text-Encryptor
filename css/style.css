@@ -259,3 +259,49 @@ textarea::placeholder {
 
   background-color: #ffffff;
 }
+
+/* tablet */
+@media screen and (max-width: 1024px){
+  .container {
+    max-width: 768px;
+  }
+
+  .logo img {
+    left: 0;
+  }
+    
+  .area-enc-des {
+    flex-direction: column;
+    width: calc(100% - 80px);
+  }
+  .area-write-buttons {
+    flex-basis: 70%;
+  }
+  
+  .buttons {
+    flex-direction: row;
+    margin-bottom: 80px;
+    width: 100%;
+  }
+  
+  .area-view {
+    flex-basis: 30%;
+    margin: 0 40px 40px;
+  }
+    
+  .image img {
+    display: none;
+  }
+    
+  .area-view-text {
+    margin: 0 40px 40px;
+  }
+  
+  .text-des-enc textarea {
+    margin-top: 0;
+  }
+
+  .text-des-enc button {
+    flex-basis: 30%;
+  }
+}
