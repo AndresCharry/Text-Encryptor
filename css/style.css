@@ -52,12 +52,14 @@ main {
 .column textarea {
   flex-basis: 100%;
   margin-top: 128px;
+  height: auto;
 
   background-color: transparent;
   color: #0a3871;
 
   border: none;
   resize: none;
+  overflow: hidden;
 
   font-family: "Inter";
   font-style: normal;
@@ -195,6 +197,13 @@ textarea::placeholder {
   flex-basis: 100%;
 }
 
+.text-des-enc textarea {
+  margin-top: 0;
+  resize: none;
+  overflow: hidden;
+  border: none;
+}
+
 .text-des-enc button {
   flex-basis: 25%;
   margin: 0 10px;
@@ -262,6 +271,9 @@ textarea::placeholder {
 
 /* tablet */
 @media screen and (max-width: 1024px){
+  html {
+    height: 100%;
+  }
   .container {
     max-width: 768px;
   }
@@ -280,21 +292,40 @@ textarea::placeholder {
   
   .buttons {
     flex-direction: row;
-    margin-bottom: 80px;
-    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .button-enc button {
+    height: 50px;
+  }
+
+  .button-dec button {
+    height: 50px;
   }
   
   .area-view {
     flex-basis: 30%;
-    margin: 0 40px 40px;
+    margin: 0 10px 10px;
   }
+
+  .area-image-text {
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
     
   .image img {
     display: none;
   }
+
+  .text {
+    padding: 5px;
+  }
     
   .area-view-text {
-    margin: 0 40px 40px;
+    margin: 0 20px 20px;
   }
   
   .text-des-enc textarea {
@@ -304,4 +335,29 @@ textarea::placeholder {
   .text-des-enc button {
     flex-basis: 30%;
   }
+}
+
+@media screen and (max-width: 480px){
+  .buttons {
+    flex-direction: column;
+  }
+
+  .button-enc {
+    margin: 5px 0;
+    flex-basis: 15%;
+  }
+  
+  .button-enc button {
+    height: 50px;
+  }
+
+  .button-dec {
+    margin: 5px 0;
+    flex-basis: 15%;
+  }
+  
+  .button-dec button {
+    height: 50px;
+  }
+
 }
