@@ -10,21 +10,17 @@ const encryptedRules = new Map([
     ["u", "ufat"],
 ]);
 const decryptionRules = new Map([
-    ["a", "i"],
-    ["e", "nter"],
-    ["i", "mes"],
-    ["o", "ber"],
-    ["u", "fat"],
+    ["a", 1],
+    ["e", 4],
+    ["i", 3],
+    ["o", 3],
+    ["u", 3],
 ]);
 
 // functions
 const wordSplit = (word) => {
     const textValue = word.split("");
     return textValue;
-}
-
-const del = (item) => {
-    console.log(item);
 }
 
 const encryptedList = (list) => {
@@ -37,19 +33,15 @@ const encryptedList = (list) => {
     return list;
 }
 
-const decryptionList = (list, index) => {
-    console.log(list);
-    console.log(index);
-    console.log(decryptionRules.has(list));
-    if(decryptionRules.has(list)){
-        console.log(list);
-        console.log(decryptionRules.get(list));
-        const deletedItem = del(list),
-        list = decryptionRules.get(list);
-        console.log(list);
+
+const decryptionList = (list) =>{
+    for (let index = 0; index < list.length; index++) {
+        if(encryptedRules.has(list[index])){
+            list.splice(index+1, decryptionRules.get(list[index]));
+        }
     }
     console.log(list);
-    return list;
+    return list
 }
 
 const encryptedText = (text) => {
@@ -67,8 +59,11 @@ const encryptedText = (text) => {
 
 const decryptionText = (text) => {
     console.log(text);
-    const newList = wordSplit(text).map(decryptionList);
-    console.log(newList);
+    // const newList = wordSplit(text).map(decryptionList);
+    const newList = decryptionList(wordSplit(text));
+    console.log(newList.join(""));
+
+    return newList;
 }
 
 // encryptedButton.addEventListener("click", encrypted);
