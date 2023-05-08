@@ -5,6 +5,7 @@ const invisible = document.getElementById("invisible");
 const observable = document.getElementById("observable");
 const encryptedButton = document.getElementById("button-enc");
 const decryptionButton = document.getElementById("button-dec");
+const copyButton = document.getElementById("copy");
 const encryptedRules = new Map([
     ["a", "ai"],
     ["e", "enter"],
@@ -30,7 +31,6 @@ const textValue = () => {
 const areaView = (text) => {
     invisible.style.display = "none";
     observable.style.display = "flex";
-    console.log(text);
     viewText.value = text;
 }
 
@@ -57,26 +57,37 @@ const decryptionList = (list) =>{
 }
 
 const encryptedText = () => {
-    const text = textValue();
-    console.log(text);
-    console.log(wordSplit(text)); 
+    const text = textValue().toLowerCase();
     const newList = wordSplit(text).map(encryptedList);
     areaView(newList.join(""));
-
-    return newList.join("");
 }
 
 const decryptionText = () => {
-    const text = textValue();
-    console.log(wordSplit(text)); 
+    const text = textValue().toLowerCase();
     const newList = decryptionList(wordSplit(text));
     areaView(newList.join(""));
+}
 
-    return newList.join("");
+const copy = () => {
+    viewText.select();
+    navigator.clipboard.writeText(viewText.value)
+  .then(() => {
+    console.log('Text copied to clipboard');
+  })
+  .catch(err => {
+    console.error('Error copying text: ', err);
+  });
+  navigator.clipboard.readText()
+  .then( viewText => {
+    // do something with the text, e.g. paste it into an element
+    text.value = viewText;
+  })
+  .catch(err => {
+    console.error('Failed to read clipboard contents: ', err);
+  });
 }
 
 encryptedButton.addEventListener("click", encryptedText);
 decryptionButton.addEventListener("click", decryptionText);
-// const EncryptedText = encryptedText;
-// decryptionText(EncryptedText);
+copyButton.addEventListener("click", copy);
 
