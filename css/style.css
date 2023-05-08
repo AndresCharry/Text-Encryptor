@@ -121,11 +121,14 @@ textarea::placeholder {
 .button-dec button {
   width: 100%;
   height: 67px;
-
   background-color: #d8dfe8;
   color: #0a3871;
   border: 1px solid #0a3871;
   border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
 }
 
 .button-enc button:hover {
@@ -152,11 +155,13 @@ textarea::placeholder {
 .area-image-text {
   position: relative;
   justify-content: center;
-
   background-color: #ffffff;
-
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
 }
 
 .image-text {
@@ -205,7 +210,7 @@ textarea::placeholder {
 }
 
 .text-des-enc button {
-  flex-basis: 25%;
+  flex-basis: 20%;
   margin: 0 10px;
 
   background-color: transparent;
